@@ -1,2 +1,4 @@
 var angular = require('angular');
-angular.module('app',[]);
+var ngModule = angular.module('app',[]);
+
+require ('./directives')(ngModule);
