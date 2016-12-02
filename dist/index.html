@@ -1,10 +1,23 @@
 <html>
-    <head>
-        <title>Angular 1.x + Webpack</title>
-    </head>
-    <body ng-app="app">
-        <h1>Angular 1.x + Webpack</h1>
-        <kcd-hello></kcd-hello>
-        <script src="dist.js"></script>
-    </body>
+
+<head>
+    <title>Angular 1.x + Webpack</title>
+    <script src="dist.js"></script>
+</head>
+
+<body ng-app="app" ng-controller="MainController as vm">
+    <h1>Traditional Structure</h1>
+
+    <div>
+        <car-card car="vm.car"></car-card>
+
+        <hello-world></hello-world>
+    </div>
+
+    <a ui-sref="car">car</a> | <a ui-sref="people">people</a>
+
+    <ui-view></ui-view>
+
+</body>
+
 </html>

@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <title>traditional structure</title>
+    <script src="node_modules/angular/angular.js"></script>
+    <script src="node_modules/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="js/cars/cars.module.js"></script>
+    <script src="js/cars/models/car.js"></script>
+    <script src="js/cars/services/cars.service.js"></script>
+    <script src="js/cars/controllers/car.controller.js"></script>
+    <script src="js/cars/directives/car-card.directive.js"></script>
+    <script src="js/people/people.module.js"></script>
+    <script src="js/people/models/person.js"></script>
+    <script src="js/people/services/people.service.js"></script>
+    <script src="js/people/controllers/person.controller.js"></script>
+    <script src="js/people/directives/kcd/kcd-hello.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/common/hello-world.directive.js"></script>
+</head>
+
+<body ng-app="app" ng-controller="MainController as vm">
+    <h1>Traditional Structure</h1>
+
+    <div>
+        <car-card car="vm.car"></car-card>
+
+        <hello-world></hello-world>
+    </div>
+
+    <a ui-sref="car">car</a> | <a ui-sref="people">people</a>
+
+    <ui-view></ui-view>
+
+</body>
+
+</html>
